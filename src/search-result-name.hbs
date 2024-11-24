@@ -1,0 +1,47 @@
+<div class='player-name-wrap'>
+  <h2 class='player-name'>{{data.account.name}}</h2>
+  <h3 class='player-level'>Level: {{data.battlePass.level}}</h3>
+
+  <div class='stats-radio-wrap'>
+
+    <input
+      checked
+      type='radio'
+      name='stats-filter'
+      value='overall'
+      class='stats-radio-input'
+      id='radio-overall'
+    />
+    <label for='radio-overall' class='stats-radio-label'>all</label>
+
+    <input
+      type='radio'
+      name='stats-filter'
+      value='solo'
+      class='stats-radio-input'
+      id='radio-solo'
+    />
+    <label for='radio-solo' class='stats-radio-label'>solo</label>
+
+    <input
+      type='radio'
+      name='stats-filter'
+      value='duo'
+      class='stats-radio-input'
+      id='radio-duo'
+    />
+    <label for='radio-duo' class='stats-radio-label'>duo</label>
+
+    <input
+      type='radio'
+      name='stats-filter'
+      value='squad'
+      class='stats-radio-input'
+      id='radio-squad'
+    />
+    <label for='radio-squad' class='stats-radio-label'>squad </label>
+  </div>
+</div>
+
+<div class='player-stats'>
+</div>
