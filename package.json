@@ -1,10 +1,10 @@
 {
-  "name": "fortniteweb",
+  "name": "FortniteHelperWeb",
   "version": "1.0.0",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --dist-dir dist",
+    "build": "parcel build src/*.html --public-url /FortniteHelperWeb/",
     "deploy": "gh-pages -d dist"
   },
   "targets": {
