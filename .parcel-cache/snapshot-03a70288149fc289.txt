@@ -1,4 +1,4 @@
-15734
+15759
 79C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\mkdirp-classic133777748065748159 1
 117C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@csstools\postcss-light-dark-function\dist\index.cjs133777748063488162 0
 55C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\src133777761206856083 1
@@ -9,7 +9,7 @@
 90C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\lines-and-columns\LICENSE133777748063318156 0
 106C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\path-browserify\test\test-path-extname.js133777748067270612 0
 105C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\pdf-viewer.js133777748083496116 0
-56C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist133777767169387850 1
+56C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist133777767880163794 1
 92C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\uuid\dist\umd\uuidv5.min.js133777748071493956 0
 109C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-util\dist\react-native\random.js133777748071973966 0
 111C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@swc\helpers\_\_class_private_field_loose_base133777748079561514 1
@@ -52,6 +52,7 @@
 99C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\uuid\dist\esm-browser\stringify.js133777748070503211 0
 136C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-common\lib\types\request\CommonUsernamePasswordRequest.d.ts133777748083266116 0
 127C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\nan\.tap\processinfo\ffb00835-3b91-4a51-8d60-646dd3b78d71.json133777748076117641 0
+78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\cosmetics.52d815dc.js133777767879963802 0
 66C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.gitattributes133777754284549595 0
 106C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\sql-storage.js133777748084126117 0
 134C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\dist\error\BrowserConfigurationAuthErrorCodes.mjs133777748081106115 0
@@ -72,7 +73,7 @@
 116C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\event-target-shim\dist\event-target-shim.umd.js.map133777748068710972 0
 93C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\entities\lib\decode.d.ts.map133777748071133958 0
 84C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\mime-types\index.js133777748064848162 0
-57C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.idea133777765163498071 1
+57C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.idea133777768232166428 1
 90C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\stream-browserify\.github133777748068781186 1
 95C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\content-disposition\HISTORY.md133777748066178156 0
 83C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\.package-lock.json133777749993572584 0
@@ -144,7 +145,7 @@
 86C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\logger\LICENSE133777748063238158 0
 106C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\source-map-js\lib\source-map-generator.js133777748068293887 0
 96C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\lightningcss\node\index.js.flow133777748067320610 0
-64C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\package.json133777767196176961 0
+64C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\package.json133777770403340304 0
 151C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\postcss-focus-visible\node_modules\postcss-selector-parser\dist\selectors\attribute.js133777748065268160 0
 103C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\template.js133777748084326115 0
 111C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-util\dist\commonjs\object.d.ts.map133777748076488247 0
@@ -975,6 +976,7 @@
 70C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\debug133777748068696511 1
 84C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\decompress-response133777748066348164 1
 93C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\tedious\lib\all-headers.d.ts133777748080132723 0
+72C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\map.21e0bc0c.js133777767879963802 0
 108C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\pad-start-end.js133777748083406120 0
 87C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\object-inspect\.github133777748071093959 1
 76C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\deep-extend133777748066808165 1
@@ -1810,6 +1812,7 @@
 102C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\svgo\plugins\removeEmptyContainers.js133777748073521851 0
 123C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline\dist\react-native\constants.d.ts133777748083606113 0
 89C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\timsort\build\timsort.js133777748067310618 0
+74C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.fb1200b2.js133777767879973795 0
 89C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\postcss-minify-selectors133777748067936089 1
 97C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\postcss-normalize-display-values133777748067676545 1
 116C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-common\lib\types\index-browser.d.ts.map133777748077557407 0
@@ -1936,6 +1939,7 @@
 92C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\proxy-from-env\package.json133777748066758167 0
 115C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@parcel\utils\test\replaceBundleReferences.test.js133777748073293962 0
 118C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest_enc2.c133777748073103962 0
+72C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\map.43dc6cde.js133777767879963802 0
 102C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\undici-types\diagnostics-channel.d.ts133777748068586510 0
 97C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\stylehacks\types\exists.d.ts.map133777748070563234 0
 148C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\postcss-nesting\node_modules\postcss-selector-parser\dist\selectors\constructors.js133777748067350610 0
@@ -3750,6 +3754,7 @@
 111C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\beforeafterprint.js133777748072993956 0
 84C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\callsites\readme.md133777748066548158 0
 113C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\link-rel-prerender.js133777748082516117 0
+78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.8e9f6283.js.map133777767880143796 0
 152C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline\dist\commonjs\policies\bearerTokenAuthenticationPolicy.js.map133777748078099021 0
 107C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@parcel\utils\test\input\config\empty.toml133777748075927644 0
 107C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\tedious\lib\data-types\uniqueidentifier.js133777748076267644 0
@@ -4373,6 +4378,7 @@
 105C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\msnodesqlv8\src\PollingModeOperation.cpp133777748070753233 0
 152C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\postcss-dir-pseudo-class\node_modules\postcss-selector-parser\dist\selectors\nesting.js133777748069443721 0
 89C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\source-map\source-map.js133777748066118156 0
+76C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\map.43dc6cde.js.map133777767880133880 0
 128C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-node\dist\request\ManagedIdentityRequestParams.d.ts133777748081386120 0
 107C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\postcss-merge-longhand\src\lib\getRules.js133777748068616506 0
 101C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\stylehacks\src\dictionary\postcss.js133777748069607947 0
@@ -6141,7 +6147,7 @@
 107C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\setimmediate.js133777748084016119 0
 141C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\postcss-focus-within\node_modules\postcss-selector-parser\dist\util\unesc.js133777748070929615 0
 81C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\domutils\LICENSE133777748063278154 0
-71C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.idea\workspace.xml133777765163498071 0
+71C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.idea\workspace.xml133777768232156426 0
 150C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\postcss-focus-within\node_modules\postcss-selector-parser\dist\selectors\className.js133777748065848163 0
 126C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\keyvault-keys\dist\browser\cryptography\conversions.js133777748068821186 0
 97C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@parcel\profiler\lib\Tracer.d.ts133777748069521368 0
@@ -7864,6 +7870,7 @@
 120C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\sample-mdb.txt133777748076907643 0
 95C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\lmdb\bin\download-prebuilds.js133777748076237645 0
 84C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\is-wsl\package.json133777748065288153 0
+72C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\br.5b1d0e47.jpg133777767873699386 0
 88C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\lines-and-columns\build133777748066548158 1
 128C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-common\src\request\CommonClientCredentialRequest.ts133777748083116128 0
 112C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-node\dist\crypto\CryptoProvider.mjs133777748077837093 0
@@ -8474,6 +8481,7 @@
 128C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-common\lib\types\cache\interface\ICacheManager.d.ts133777748083556120 0
 122C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\htmlnano\docs\versioned_docs\version-2.0.0\050-modules.md133777748073263958 0
 101C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\css-tree\cjs\syntax\atrule\media.cjs133777748073701853 0
+74C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\hero.78a4e1db.jpg133777767878955936 0
 125C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\htmlnano\docs\versioned_docs\version-2.0.0\060-contribute.md133777748073383962 0
 87C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\content-type\README.md133777748066598157 0
 126C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline\dist\react-native\interfaces.js.map133777748081316115 0
@@ -9154,6 +9162,7 @@
 94C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\domutils\lib\esm\index.js.map133777748070791520 0
 103C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\download.js133777748080486115 0
 93C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\domutils\lib\esm\legacy.d.ts133777748072663967 0
+78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.ca73206c.js.map133777767880143796 0
 91C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\domutils\lib\esm\legacy.js133777748068022301 0
 98C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\av1.js133777748072103958 0
 106C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-client\dist\esm\base64.js.map133777748075397642 0
@@ -9404,6 +9413,7 @@
 86C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@types\node\repl.d.ts133777748072633956 0
 125C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\csso\node_modules\css-tree\lib\syntax\node\index-generate.js133777748077450714 0
 131C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\csso\node_modules\css-tree\lib\syntax\node\index-parse-selector.js133777748077470735 0
+76C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\racing.6c1dfb6b.jpg133777767878955936 0
 106C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@parcel\packager-wasm\src\WasmPackager.js133777748067240615 0
 81C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\call-bind\.nycrc133777748065318153 0
 122C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\csso\node_modules\css-tree\lib\syntax\node\index-parse.js133777748077484321 0
@@ -10532,7 +10542,7 @@
 111C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\array-find-index.js133777748070913076 0
 118C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\date-tolocaledatestring.js133777748080171363 0
 105C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\array-find.js133777748071005451 0
-67C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.html133777767167350326 0
+67C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.html133777767879963802 0
 105C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\array-flat.js133777748071073956 0
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\f1133777117053908991 1
 100C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\caniuse-lite\data\features\asmjs.js133777748071433957 0
@@ -12825,6 +12835,7 @@
 108C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@csstools\postcss-hwb-function\CHANGELOG.md133777748065528158 0
 106C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@csstools\postcss-hwb-function\LICENSE.md133777748066108158 0
 108C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@csstools\postcss-hwb-function\package.json133777748064958158 0
+76C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\map.21e0bc0c.js.map133777767880133880 0
 105C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@csstools\postcss-hwb-function\README.md133777748066688157 0
 110C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@csstools\postcss-hwb-function\dist\index.cjs133777748063488162 0
 111C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@csstools\postcss-hwb-function\dist\index.d.ts133777748067492235 0
@@ -12963,6 +12974,7 @@
 148C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\identity\dist-esm\src\credentials\authorizationCodeCredential.browser.js.map133777748076087644 0
 99C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@babel\code-frame\lib\index.js.map133777748066378168 0
 88C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\abort-controller133777748071863957 1
+78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\festival.2b17857f.jpg133777767873679390 0
 83C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-paging133777748071883954 1
 90C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline133777748083376122 1
 84C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-tracing133777748073621848 1
@@ -13851,6 +13863,7 @@
 123C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-lro\dist\browser\legacy\lroEngine\lroEngine.js133777748070593235 0
 112C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\src\naa\BridgeStatusCode.ts133777748082316120 0
 108C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\src\naa\IBridgeProxy.ts133777748083126118 0
+74C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\lego.5f22412e.jpg133777767873689401 0
 121C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline\dist\browser\util\inspect.d.ts133777748083946118 0
 107C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\src\naa\InitContext.ts133777748083246110 0
 100C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\src\naa\mapping133777748083696109 1
@@ -14020,7 +14033,7 @@
 100C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\dist\navigation133777748083666108 1
 97C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\dist\network133777748083026108 1
 106C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\dist\operatingcontext133777748084346114 1
-71C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\cosmetics.html133777767167350326 0
+71C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\cosmetics.html133777767879963802 0
 114C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\dist\packageMetadata.d.ts.map133777748079946696 0
 109C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\dist\packageMetadata.mjs133777748081456121 0
 97C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\msal-browser\dist\request133777748084176121 1
@@ -15053,6 +15066,7 @@
 149C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline\dist\commonjs\retryStrategies\throttlingRetryStrategy.d.ts133777748084436115 0
 154C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline\dist\commonjs\policies\auxiliaryAuthenticationHeaderPolicy.d.ts133777748083436121 0
 152C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline\dist\commonjs\policies\auxiliaryAuthenticationHeaderPolicy.js133777748068463678 0
+74C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.8e9f6283.js133777767879973795 0
 148C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline\dist\commonjs\policies\bearerTokenAuthenticationPolicy.js133777748069289015 0
 143C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline\dist\commonjs\policies\decompressResponsePolicy.d.ts133777748083656108 0
 147C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-rest-pipeline\dist\commonjs\policies\decompressResponsePolicy.d.ts.map133777748079986697 0
@@ -15312,7 +15326,7 @@
 97C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-http-compat\dist\esm133777748076817648 1
 117C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-client\dist\react-native\serializer.d.ts133777748080142755 0
 124C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-http-compat\dist\react-native\extendedClient.js133777748069249022 0
-69C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\sign_in.html133777767167350326 0
+69C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\sign_in.html133777767879963802 0
 121C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-client\dist\react-native\serializer.d.ts.map133777748077242578 0
 128C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-http-compat\dist\react-native\extendedClient.js.map133777748072973957 0
 133C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\@azure\core-http-compat\dist\react-native\httpClientAdapter.d.ts.map133777748073133955 0
@@ -15604,20 +15618,33 @@
 78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\.bin\svgo.ps1133777748086566123 0
 78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\.bin\uglifyjs133777748086566123 0
 96C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\node_modules\.bin\update-browserslist-db.ps1133777748086566123 0
+73C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\all.7ded913d.jpg133777767873689401 0
 72C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\br.835728c1.jpg133777767167360326 0
+79C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\cosmetics.3ff2d3f6.css133777767879963802 0
+61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\74133777117053593888 1
+83C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\cosmetics.3ff2d3f6.css.map133777767880133880 0
+78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\cosmetics.4b7fb263.js133777767879963802 0
+82C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\cosmetics.4b7fb263.js.map133777767880133880 0
+82C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\cosmetics.52d815dc.js.map133777767880133880 0
 78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\cosmetics.de456dc1.js133777767167360326 0
 82C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\cosmetics.de456dc1.js.map133777767168942842 0
 90C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\FortniteHelperWeb.59712999.js.map133777767168942842 0
 74C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\hero.22dc911d.jpg133777767169236534 0
 75C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\icons.adfc4680.svg133777767167360326 0
-67C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\index.html133777767167360326 0
+75C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\icons.c5b0f01c.svg133777767876529593 0
+67C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\index.html133777767879963802 0
 72C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\map.c3f8884b.js133777767167360326 0
-65C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\map.html133777767167350326 0
+65C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\map.html133777767879963802 0
 76C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\racing.c08df0b9.jpg133777767167360326 0
 76C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\sign-up.a0bd974f.js133777767167360326 0
-69C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\sign-up.html133777767167350326 0
+69C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\sign-up.html133777767879963802 0
 74C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.64cfb8ea.js133777767167360326 0
 78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.64cfb8ea.js.map133777767168952845 0
+74C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.b786ee57.js133777767879973795 0
+78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.b786ee57.js.map133777767880143796 0
+61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\cd133777117053808994 1
+74C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.ca73206c.js133777767879973795 0
+78C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\dist\stats.fb1200b2.js.map133777767880143796 0
 68C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.idea\.gitignore133777077238968934 0
 69C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.idea\modules.xml133777077237508485 0
 65C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.idea\vcs.xml133777755822902665 0
@@ -15664,7 +15691,6 @@
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\6e133777117053573891 1
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\6f133777117053573891 1
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\73133777117053593888 1
-61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\74133777117053593888 1
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\75133777117053603885 1
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\76133777117053603885 1
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\77133777117053603885 1
@@ -15706,7 +15732,6 @@
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\c9133777117054058988 1
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\ca133777117053808994 1
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\cc133777117557602746 1
-61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\cd133777117053808994 1
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\d0133777117053818994 1
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\d5133777117053828992 1
 61C:\Users\User\Desktop\FortniteWeb\FortniteHelperWeb\.cache\d6133777117053828992 1
