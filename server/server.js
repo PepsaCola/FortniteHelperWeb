@@ -4,6 +4,7 @@ const cors = require('cors'); // Імпортуємо CORS
 
 const app = express();
 const PORT = 3000;
+let number = 56
 
 const config = {
     connectionString:
@@ -20,7 +21,7 @@ app.get('/api/search-results', async (req, res) => {
         conn = await sql.connect(config);
 
         const result = await new sql.Request().query(`
-      SELECT TOP 40 
+      SELECT TOP ${number} 
         l.itemID, 
         b.Images as brI, 
         ins.Images as insI, 
@@ -45,6 +46,40 @@ app.get('/api/search-results', async (req, res) => {
         if (conn) await sql.close();
     }
 });
+
+app.get('/api/search-more', async (req, res) => {
+    let conn;
+
+    try {
+        conn = await sql.connect(config);
+
+        const result = await new sql.Request().query(`
+            SELECT
+                l.itemID,
+                b.Images as brI,
+                ins.Images as insI,
+                t.AlbumArt as trI,
+                leg.Images as legI,
+                c.Images as carI
+            FROM Items l
+                     JOIN BR b ON l.BRID = b.BRID
+                     JOIN Festival f ON l.FestivalID = f.FestivalID
+                     JOIN Instruments ins ON f.InstrumentsID = ins.InstrumentsID
+                     JOIN Tracks t ON f.TracksID = t.TracksID
+                     JOIN Lego leg ON l.LegoID = leg.LegoID
+                     JOIN Cars c ON l.CarsID = c.CarsID
+            ORDER BY AddedDate DESC
+            OFFSET ${number} ROWS FETCH NEXT 56 ROWS ONLY;
+    `);
+        number+=56
+        res.json(result.recordset); // Повертаємо дані у форматі JSON
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send('Помилка на сервері');
+    } finally {
+        if (conn) await sql.close();
+    }
+})
 
 // Запуск сервера
 app.listen(PORT, () => {

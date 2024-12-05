@@ -1,0 +1,140 @@
+.main-container{
+  background: linear-gradient(
+                  126deg,
+                  rgba(54, 33, 89, 0.5) 0%,
+                  rgba(24, 24, 24, 0.5) 100%
+  );
+  background-repeat: no-repeat;
+  padding-bottom: 160px;
+}
+.cosmetic-search {
+
+  padding: 182px 162px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+.cosmetics-title {
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  flex-basis: 100%;
+}
+.cosmetics-wrap {
+  position: relative;
+  display: inline-block;
+}
+.cosmetics-input {
+  box-sizing: border-box;
+  padding: 13px 49px;
+  width: 300px;
+  height: 48px;
+  background: #d9d9d9;
+  border-radius: 50px;
+  color: #737373;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  &::placeholder {
+    color: #737373;
+    font-size: 20px;
+  }
+}
+.cosmetics-icon {
+  position: absolute;
+  fill: #737373;
+  top: 9px;
+  left: 15px;
+}
+.cosmetics-btn {
+  display: inline-block;
+  padding: 5px 42px;
+  background: #bebe28;
+  border-radius: 10px;
+  color: black;
+  font-size: 32px;
+}
+
+.cosmetic-radio-label {
+  width: 37px;
+  height: 37px;
+  display: inline-block;
+  position: relative;
+
+  cursor: pointer;
+}
+.cosmetic-radio-input {
+  position: absolute;
+  opacity: 0;
+
+  height: 0;
+  width: 0;
+  &:checked ~ .cosmetic-radio-span {
+    border-color: white;
+  }
+}
+.cosmetic-radio-span {
+  border: #000 3px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 37px;
+  height: 37px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: border-color 0.3s linear;
+  &.all {
+    background-image: url(../images/all.jpg);
+  }
+  &.br {
+    background-image: url(../images/br.jpg);
+  }
+  &.lego {
+    background-image: url(../images/lego.jpg);
+  }
+  &.racing {
+    background-image: url(../images/racing.jpg);
+  }
+  &.festival {
+    background-image: url(../images/festival.jpg);
+  }
+}
+
+.cosmetic-radio-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  height: 40px;
+  flex-basis: 100%;
+}
+
+.cosmetic-search-result-list{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1280px;
+  gap: 17px;
+
+}
+.cosmetic-search-result-item{
+  width: calc((100% - 119px)/8);
+  background: linear-gradient(82.5deg, #362159 0%, #181818 100%);
+  border-radius: 10px;
+
+}
+.cosmetic-search-result-img{
+  width: 100%;
+  height: 100%;
+
+}
+.cosmetic-search-result-btn{
+  margin: 0 auto;
+  margin-top: 70px;
+  display: block;
+}

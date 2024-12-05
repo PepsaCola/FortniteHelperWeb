@@ -4,7 +4,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel *.html",
-    "build": "parcel build *.html --public-url /FortniteHelperWeb/",
+    "build": "parcel build ю*.html --public-url /FortniteHelperWeb/",
     "deploy": "gh-pages -d dist"
   },
   "targets": {
