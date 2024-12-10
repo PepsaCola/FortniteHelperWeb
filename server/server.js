@@ -17,37 +17,79 @@ app.use(cors());
 // Маршрут для отримання результатів пошуку
 app.get('/api/search-results', async (req, res) => {
     const filter = req.query.filter || 'all'; // Отримуємо фільтр із запиту
-    const text = req.query.text || '';
+    const text = req.query.text || ''; // Отримуємо текст із запиту
 
-    number = 56
+    number = 56; // Початкова кількість результатів
     let query = `
-    SELECT TOP ${number} 
-      l.itemID, 
-      b.Images as brI, 
-        b.ItemName as brN,
-      ins.Images as insI,
-        ins.ItemName as insN,
-      t.AlbumArt as trI,
-        t.ItemTitle as trN,
-      leg.Images as legI, 
-        leg.ItemName as legN,
-      c.Images as carI,
-        c.ItemName as carN
-    FROM Items l
-      JOIN BR b ON l.BRID = b.BRID
-      JOIN Festival f ON l.FestivalID = f.FestivalID
-      JOIN Instruments ins ON f.InstrumentsID = ins.InstrumentsID
-      JOIN Tracks t ON f.TracksID = t.TracksID
-      JOIN Lego leg ON l.LegoID = leg.LegoID
-      JOIN Cars c ON l.CarsID = c.CarsID
-  `;
+        SELECT TOP ${number}
+            l.itemID,
+                b.BRID as brID,
+               b.Images as brI,
+               b.ItemName as brN,
+               b.ItemDescription as brDes,
+               b.Chapter as brChap,
+               b.Season as brSeason,
+               rarBr.RarityName as brRarity,
+               tBr.TypeName as bType,
+               ins.InstrumentsID as insID,
+               ins.Images as insI,
+               ins.ItemName as insN,
+               ins.ItemDescription as insDes,
+               rarIns.RarityName as insRarity,
+               tIns.TypeName as insType,
+               t.TracksID as tID,
+               t.AlbumArt as trI,
+               t.ItemTitle as trN,
+               t.Artist as tArtist,
+               t.ReleaseYear as tReleaseYear,
+               t.Duration as tDuration,
+               leg.LegoID as legID,
+               leg.Images as legI,
+               leg.ItemName as legN,
+               c.CarsID as carID,
+               c.Images as carI,
+               c.ItemName as carN,
+               c.ItemDescription as carDes,
+               rarC.RarityName as carRarity,
+               tCar.TypeName as carType
+        FROM Items l
+                 JOIN BR b ON l.BRID = b.BRID
+                 JOIN Festival f ON l.FestivalID = f.FestivalID
+                 JOIN Instruments ins ON f.InstrumentsID = ins.InstrumentsID
+                 JOIN Tracks t ON f.TracksID = t.TracksID
+                 JOIN Lego leg ON l.LegoID = leg.LegoID
+                 JOIN Cars c ON l.CarsID = c.CarsID
+                 LEFT JOIN Rarities rarBr ON rarBr.RarityID = b.RarityID
+                 LEFT JOIN Rarities rarC ON rarC.RarityID = c.RarityID
+                 LEFT JOIN Rarities rarIns ON rarIns.RarityID = ins.RarityID
+                 left join BRTypes tBr ON tBr.TypeID = b.TypeID
+                 left join InstrumentsTypes tIns ON tIns.TypeID = ins.TypeID
+                 left join CarsTypes tCar ON tCar.TypeID = c.TypeID
+    `;
 
     // Додаємо фільтр
+    let whereClauses = [];
     if (filter !== 'all') {
-        query += ` WHERE ${filter === 'br' ? 'b.Images IS NOT NULL' :
-            filter === 'lego' ? 'leg.Images IS NOT NULL' :
-                filter === 'race' ? 'c.Images IS NOT NULL' :
-                    'ins.Images IS NOT NULL or t.AlbumArt IS NOT NULL'}`;
+        whereClauses.push(
+            filter === 'br' ? 'b.Images IS NOT NULL' :
+                filter === 'lego' ? 'leg.Images IS NOT NULL' :
+                    filter === 'race' ? 'c.Images IS NOT NULL' :
+                        '(ins.Images IS NOT NULL OR t.AlbumArt IS NOT NULL)'
+        );
+    }
+
+    if (text.trim()) {
+        whereClauses.push(`
+            (b.ItemName LIKE '%${text}%' OR
+            ins.ItemName LIKE '%${text}%' OR
+            t.ItemTitle LIKE '%${text}%' OR
+            leg.ItemName LIKE '%${text}%' OR
+            c.ItemName LIKE '%${text}%')
+        `);
+    }
+
+    if (whereClauses.length > 0) {
+        query += ` WHERE ${whereClauses.join(' AND ')}`;
     }
 
     query += ' ORDER BY AddedDate DESC';
@@ -65,21 +107,40 @@ app.get('/api/search-results', async (req, res) => {
 
 app.get('/api/search-more', async (req, res) => {
     const filter = req.query.filter || 'all'; // Отримуємо фільтр із запиту
-
+    const text = req.query.text || ''; // Отримуємо текст із запиту
 
     let query = `
     SELECT 
       l.itemID,
+      b.BRID as brID,
       b.Images as brI,
       b.ItemName as brN,
+      b.ItemDescription as brDes,
+      b.Chapter as brChap,
+      b.Season as brSeason,
+      rarBr.RarityName as brRarity,
+      tBr.TypeName as bType,
+      ins.InstrumentsID as insID,
       ins.Images as insI,
       ins.ItemName as insN,
+      ins.ItemDescription as insDes,
+      rarIns.RarityName as insRarity,
+      tIns.TypeName as insType,
+      t.TracksID as tID,
       t.AlbumArt as trI,
       t.ItemTitle as trN,
+      t.Artist as tArtist,
+      t.ReleaseYear as tReleaseYear,
+      t.Duration as tDuration,
+      leg.LegoID as legID,
       leg.Images as legI,
       leg.ItemName as legN,
+      c.CarsID as carID,
       c.Images as carI,
-      c.ItemName as carN
+      c.ItemName as carN,
+      c.ItemDescription as carDes,
+      rarC.RarityName as carRarity,
+      tCar.TypeName as carType
     FROM Items l
       JOIN BR b ON l.BRID = b.BRID
       JOIN Festival f ON l.FestivalID = f.FestivalID
@@ -87,14 +148,37 @@ app.get('/api/search-more', async (req, res) => {
       JOIN Tracks t ON f.TracksID = t.TracksID
       JOIN Lego leg ON l.LegoID = leg.LegoID
       JOIN Cars c ON l.CarsID = c.CarsID
+      LEFT JOIN Rarities rarBr ON rarBr.RarityID = b.RarityID
+      LEFT JOIN Rarities rarC ON rarC.RarityID = c.RarityID
+      LEFT JOIN Rarities rarIns ON rarIns.RarityID = ins.RarityID
+      left join BRTypes tBr ON tBr.TypeID = b.TypeID
+      left join InstrumentsTypes tIns ON tIns.TypeID = ins.TypeID
+      left join CarsTypes tCar ON tCar.TypeID = c.TypeID
   `;
 
     // Додаємо фільтр
+    let whereClauses = [];
     if (filter !== 'all') {
-        query += ` WHERE ${filter === 'br' ? 'b.Images IS NOT NULL' :
-            filter === 'lego' ? 'leg.Images IS NOT NULL' :
-                filter === 'race' ? 'c.Images IS NOT NULL' :
-                    'ins.Images IS NOT NULL OR t.AlbumArt IS NOT NULL'}`;
+        whereClauses.push(
+            filter === 'br' ? 'b.Images IS NOT NULL' :
+                filter === 'lego' ? 'leg.Images IS NOT NULL' :
+                    filter === 'race' ? 'c.Images IS NOT NULL' :
+                        '(ins.Images IS NOT NULL OR t.AlbumArt IS NOT NULL)'
+        );
+    }
+
+    if (text.trim()) {
+        whereClauses.push(`
+            (b.ItemName LIKE '%${text}%' OR
+            ins.ItemName LIKE '%${text}%' OR
+            t.ItemTitle LIKE '%${text}%' OR
+            leg.ItemName LIKE '%${text}%' OR
+            c.ItemName LIKE '%${text}%')
+        `);
+    }
+
+    if (whereClauses.length > 0) {
+        query += ` WHERE ${whereClauses.join(' AND ')}`;
     }
 
     query += ` ORDER BY AddedDate DESC OFFSET ${number} ROWS FETCH NEXT 56 ROWS ONLY;`;

@@ -4,13 +4,16 @@ let currentText = ''
 const inputText = document.querySelector('input[name="filter-text"]');
 inputText.addEventListener('change', handleTextChange);
 
+
 function handleTextChange(event) {
   currentText = event.target.value;
   fetchSearchResults();
 }
 
+
 // Глобальна змінна для збереження поточного фільтра
 let currentFilter = 'all';
+
 
 // Функція для обробки змін у виборі радіокнопок
 function handleFilterChange(event) {
@@ -21,24 +24,52 @@ function handleFilterChange(event) {
   fetchSearchResults();
 }
 
+
 // Додаємо слухачі подій до всіх радіокнопок
 document.querySelectorAll('input[name="filter-game"]').forEach((radio) => {
-  radio.addEventListener('change', handleFilterChange);
+  radio.addEventListener('input', handleFilterChange);
 });
+
 
 // Функція для створення HTML із результату
 function createSearchResult(item) {
-  const data1 = item.brN != '1' ? item.brN :
-      item.insN !='1' ? item.insN :
-          item.trN != '1' ? item.trN :
-              item.legN != '1' ? item.legN :
-                  item.carN
+
+if(item.brID != '1'){
   return `
-    <li class="cosmetic-search-result-item" data-alt="${data1}">
-      <img class="cosmetic-search-result-img" src="${item.brI || item.insI || item.trI || item.legI || item.carI}" alt="${item.itemID}">
+    <li class="cosmetic-search-result-item" data-id="${item.brID}" data-name="${item.brN}" data-description="${item.brDes}" data-image="${item.brI}" data-chapter="${item.brChap}" data-season="${item.brSeason}" data-rarity="${item.brRarity}" data-type="${item.bType}">
+      <img class="cosmetic-search-result-img" src="${item.brI}" alt="${item.brID}">
     </li>
   `;
 }
+if(item.tID != '1'){
+
+    return `
+    <li class="cosmetic-search-result-item" data-id="${item.tID}" data-name="${item.trN}" data-image="${item.trI}" data-artist="${item.tArtist}" data-release="${item.tReleaseYear}" data-duration="${item.tDuration} ">
+      <img class="cosmetic-search-result-img" src="${item.trI}" alt="${item.tID}">
+    </li>
+  `;
+}
+if(item.insID !='1')
+  return `
+    <li class="cosmetic-search-result-item" data-id="${item.insID}" data-name="${item.insN}" data-description="${item.insDes}" data-image="${item.insI}" data-rarity="${item.insRarity}" data-type="${item.insType}">
+      <img class="cosmetic-search-result-img" src="${item.insI}" alt="${item.insID}">
+    </li>
+  `;
+if(item.carID !='1'){
+  return `
+    <li class="cosmetic-search-result-item" data-id="${item.carID}" data-name="${item.carN}" data-description="${item.carDes}" data-image="${item.carI}" >
+      <img class="cosmetic-search-result-img" src="${item.carI}" alt="${item.carID}">
+    </li>
+  `;
+}
+  return `
+    <li class="cosmetic-search-result-item" data-id="${item.legID}" data-name="${item.legN}"  data-image="${item.legI}" >
+      <img class="cosmetic-search-result-img" src="${item.legI}" alt="${item.legID}">
+    </li>
+  `;
+
+}
+
 
 // Функція для отримання даних і відображення
 async function fetchSearchResults() {
@@ -49,8 +80,11 @@ async function fetchSearchResults() {
     const response = await fetch(`http://localhost:3000/api/search-results?filter=${currentFilter}&text=${currentText}`, {});
     const data = await response.json();
 
+
+
     for (const item of data) {
       divResult.insertAdjacentHTML('beforeend', createSearchResult(item));
+
     }
 
     // Перевіряємо, чи вже існує кнопка "Load more"
@@ -66,11 +100,17 @@ async function fetchSearchResults() {
 
     // Додаємо слухача на кнопку
     const btn = document.querySelector('.cosmetic-search-result-btn');
+    if (data.length < 56) {
+      // Якщо більше немає даних, приховуємо кнопку
+      btn.style.display = 'none';
+      return;
+    }
     btn.addEventListener('click', fetchLoadMore);
   } catch (error) {
     console.error('Error fetching search results:', error);
   }
 }
+
 
 // Функція для завантаження додаткових даних
 async function fetchLoadMore() {
@@ -82,14 +122,15 @@ async function fetchLoadMore() {
     const response = await fetch(`http://localhost:3000/api/search-more?filter=${currentFilter}&text=${currentText}`);
     const data = await response.json();
 
-    if (data.length === 0) {
-      // Якщо більше немає даних, приховуємо кнопку
-      btn.style.display = 'none';
-      return;
-    }
+
 
     for (const item of data) {
       divResult.insertAdjacentHTML('beforeend', createSearchResult(item));
+    }
+    if (data.length < 56) {
+      // Якщо більше немає даних, приховуємо кнопку
+      btn.style.display = 'none';
+
     }
   } catch (error) {
     console.error('Error fetching more results:', error);
