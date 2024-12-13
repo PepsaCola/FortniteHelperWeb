@@ -1,5 +1,4 @@
 
-
 let currentText = ''
 const inputText = document.querySelector('input[name="filter-text"]');
 inputText.addEventListener('change', handleTextChange);

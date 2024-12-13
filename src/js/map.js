@@ -1,9 +1,10 @@
-import { GetMap } from './Fortnite-API';
+
 const map = document.querySelector('.map');
-const fortAPI = new GetMap();
+
 async function loadMap() {
   try {
-    const mapImage = await fortAPI.getMap();
+    const response = await fetch(`http://localhost:3000/api/get-map`, {});
+    const mapImage = await response.json();
     console.log(mapImage.blank);
 
     map.style.backgroundImage = `url(${mapImage.blank})`;
@@ -24,7 +25,8 @@ async function poisMap() {
     return;
   }
   try {
-    const mapImage = await fortAPI.getMap();
+    const response = await fetch(`http://localhost:3000/api/get-map`, {});
+    const mapImage = await response.json();
 
     map.style.backgroundImage = `url(${mapImage.pois})`;
   } catch (error) {

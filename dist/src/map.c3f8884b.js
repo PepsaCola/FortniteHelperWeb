@@ -596,12 +596,11 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"kvSuP":[function(require,module,exports,__globalThis) {
-var _fortniteAPI = require("./Fortnite-API");
 const map = document.querySelector('.map');
-const fortAPI = new (0, _fortniteAPI.GetMap)();
 async function loadMap() {
     try {
-        const mapImage = await fortAPI.getMap();
+        const response = await fetch(`http://localhost:3000/api/get-map`, {});
+        const mapImage = await response.json();
         console.log(mapImage.blank);
         map.style.backgroundImage = `url(${mapImage.blank})`;
     } catch (error) {
@@ -620,13 +619,14 @@ async function poisMap() {
         return;
     }
     try {
-        const mapImage = await fortAPI.getMap();
+        const response = await fetch(`http://localhost:3000/api/get-map`, {});
+        const mapImage = await response.json();
         map.style.backgroundImage = `url(${mapImage.pois})`;
     } catch (error) {
         console.error("\u041F\u043E\u043C\u0438\u043B\u043A\u0430 \u0437\u0430\u0432\u0430\u043D\u0442\u0430\u0436\u0435\u043D\u043D\u044F \u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u043D\u044F \u043A\u0430\u0440\u0442\u0438:", error);
     }
 }
 
-},{"./Fortnite-API":"3wDv1"}]},["9SdOO","kvSuP"], "kvSuP", "parcelRequire94c2")
+},{}]},["9SdOO","kvSuP"], "kvSuP", "parcelRequire94c2")
 
 //# sourceMappingURL=map.c3f8884b.js.map

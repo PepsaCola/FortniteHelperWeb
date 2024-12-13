@@ -1,6 +1,7 @@
 const express = require('express');
 const sql = require('mssql/msnodesqlv8');
-const cors = require('cors'); // Імпортуємо CORS
+const cors = require('cors');
+const axios = require("axios"); // Імпортуємо CORS
 
 const app = express();
 const PORT = 3000;
@@ -193,6 +194,18 @@ app.get('/api/search-more', async (req, res) => {
         res.status(500).send('Server Error');
     }
 });
+
+app.get('/api/get-map', async (req, res) => {
+    const BASE_URL = 'https://fortnite-api.com/v1/map';
+
+    try {
+        const response = await axios.get(BASE_URL);
+        res.json(response.data.data.images); // Отправляем данные клиенту
+    } catch (error) {
+        console.error('Ошибка получения карты:', error.message);
+        res.status(500).send('Ошибка сервера при загрузке карты');
+    }
+})
 
 // Запуск сервера
 app.listen(PORT, () => {
