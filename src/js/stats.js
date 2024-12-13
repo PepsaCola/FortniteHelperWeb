@@ -1,38 +1,18 @@
-import { GetStats } from './Fortnite-API';
-import createResultStats from '../serch-result-stats-overall.hbs';
-import createResultName from '../search-result-name.hbs';
-import createResultStatsSolo from '../serch-result-stats-solo.hbs';
-import createResultStatsDuo from '../serch-result-stats-duo.hbs';
-import createResultStatsSquad from '../serch-result-stats-squad.hbs';
+import{createResultStats,createResultName,createResultStatsSolo,createResultStatsDuo,createResultStatsSquad}  from './handlebars';
+
+
 
 const stats = document.querySelector('.search-stats-form');
 stats.addEventListener('submit', event => handleSearch(event));
 const result = document.querySelector('.search-stats-result');
 
-
-
 async function handleSearch(event) {
   event.preventDefault();
   try {
     const res = await fetch(`http://localhost:3000/api/get-stats?text=${event.target.name.value.trim()}`, {});
-    if (!res.ok) {
-      throw new Error('Failed to fetch stats');
-      result.insertAdjacentHTML(
-          'afterbegin',
-          "<p class='gamemode-error'>The player was not found</p>"
-      );
-      return;
-    }
     const response = await res.json();
     result.innerHTML = '';
-    console.log(response);
-    if (!response || !response.data || !response.data.stats) {
-      result.insertAdjacentHTML(
-          'afterbegin',
-          "<p class='gamemode-error'>The player was not found</p>"
-      );
-      return;
-    }
+
 
     result.insertAdjacentHTML('afterbegin', createResultName(response));
     const selectedValue = document.querySelector(
@@ -70,53 +50,43 @@ async function handleSearch(event) {
 }
 
 function handleRadioChange(event, response, plrStats) {
+  const selectedValue = event.target.value;
   plrStats.innerHTML = '';
+  insertStats(selectedValue, response, plrStats);
+}
 
-  if (event.target.value === 'overall') {
+function insertStats(selectedValue, response, plrStats) {
+  const statsData = response.data.stats.all[selectedValue];
+  if (!statsData) {
     plrStats.insertAdjacentHTML(
-      'beforeend',
-      createResultStats(response.data.stats.all[event.target.value])
+        'beforeend',
+        "<p class='gamemode-error'>The player has not played this game mode</p>"
     );
-    plrStats.insertAdjacentHTML(
-      'beforeend',
-      createTime(response.data.stats.all[event.target.value])
-    );
-  } else if (
-    event.target.value === 'solo' &&
-    response.data.stats.all[event.target.value]
-  ) {
-    plrStats.insertAdjacentHTML(
-      'beforeend',
-      createResultStatsSolo(response.data.stats.all[event.target.value])
-    );
-    plrStats.insertAdjacentHTML(
-      'beforeend',
-      createTime(response.data.stats.all[event.target.value])
-    );
-  } else if (event.target.value === 'duo') {
-    plrStats.insertAdjacentHTML(
-      'beforeend',
-      createResultStatsDuo(response.data.stats.all[event.target.value])
-    );
-    plrStats.insertAdjacentHTML(
-      'beforeend',
-      createTime(response.data.stats.all[event.target.value])
-    );
-  } else if (event.target.value === 'squad') {
-    plrStats.insertAdjacentHTML(
-      'beforeend',
-      createResultStatsSquad(response.data.stats.all[event.target.value])
-    );
-    plrStats.insertAdjacentHTML(
-      'beforeend',
-      createTime(response.data.stats.all[event.target.value])
-    );
-  } else {
-    plrStats.insertAdjacentHTML(
-      'beforeend',
-      "<p class='gamemode-error'>The player has not played this game mode </p>"
-    );
+    return;
   }
+
+  switch (selectedValue) {
+    case 'overall':
+      plrStats.insertAdjacentHTML('beforeend', createResultStats(statsData));
+      break;
+    case 'solo':
+      plrStats.insertAdjacentHTML('beforeend', createResultStatsSolo(statsData));
+      break;
+    case 'duo':
+      plrStats.insertAdjacentHTML('beforeend', createResultStatsDuo(statsData));
+      break;
+    case 'squad':
+      plrStats.insertAdjacentHTML('beforeend', createResultStatsSquad(statsData));
+      break;
+    default:
+      plrStats.insertAdjacentHTML(
+          'beforeend',
+          "<p class='gamemode-error'>Invalid game mode selected</p>"
+      );
+  }
+
+  // Add time stats
+  plrStats.insertAdjacentHTML('beforeend', createTime(statsData));
 }
 
 function createTime(response) {
