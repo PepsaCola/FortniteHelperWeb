@@ -1,4 +1,4 @@
-import{createResultStats,createResultName,createResultStatsSolo,createResultStatsDuo,createResultStatsSquad}  from './handlebars';
+import{createResultStats,createResultName,createResultStatsSolo,createResultStatsDuo,createResultStatsSquad}  from './handlebars.js';
 
 
 
@@ -12,7 +12,15 @@ async function handleSearch(event) {
     const res = await fetch(`http://localhost:3000/api/get-stats?text=${event.target.name.value.trim()}`, {});
     const response = await res.json();
     result.innerHTML = '';
+    console.log(response);
 
+    if(response.status === 404) {
+      result.insertAdjacentHTML(
+          'afterbegin',
+          "<p class='gamemode-error'>The player was not found</p>"
+      );
+      return;
+    }
 
     result.insertAdjacentHTML('afterbegin', createResultName(response));
     const selectedValue = document.querySelector(
@@ -36,14 +44,8 @@ async function handleSearch(event) {
 
   }
   catch (error) {
+
     console.error('Error fetching player stats:', error.message);
-    if(error.status === 404) {
-      result.insertAdjacentHTML(
-          'afterbegin',
-          "<p class='gamemode-error'>The player was not found</p>"
-      );
-      return;
-    }
     result.innerHTML = `<p class='gamemode-error'>An error occurred while fetching stats. Please try again later.</p>`;
   }
 

@@ -596,7 +596,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"6W8oH":[function(require,module,exports,__globalThis) {
-var _handlebars = require("./handlebars");
+var _handlebarsJs = require("./handlebars.js");
 const stats = document.querySelector('.search-stats-form');
 stats.addEventListener('submit', (event)=>handleSearch(event));
 const result = document.querySelector('.search-stats-result');
@@ -606,10 +606,15 @@ async function handleSearch(event) {
         const res = await fetch(`http://localhost:3000/api/get-stats?text=${event.target.name.value.trim()}`, {});
         const response = await res.json();
         result.innerHTML = '';
-        result.insertAdjacentHTML('afterbegin', (0, _handlebars.createResultName)(response));
+        console.log(response);
+        if (response.status === 404) {
+            result.insertAdjacentHTML('afterbegin', "<p class='gamemode-error'>The player was not found</p>");
+            return;
+        }
+        result.insertAdjacentHTML('afterbegin', (0, _handlebarsJs.createResultName)(response));
         const selectedValue = document.querySelector('input[name="stats-filter"]:checked').value;
         const plrStats = document.querySelector('.player-stats');
-        plrStats.insertAdjacentHTML('beforeend', (0, _handlebars.createResultStats)(response.data.stats.all[selectedValue]));
+        plrStats.insertAdjacentHTML('beforeend', (0, _handlebarsJs.createResultStats)(response.data.stats.all[selectedValue]));
         plrStats.insertAdjacentHTML('beforeend', createTime(response.data.stats.all[selectedValue]));
         const radio = document.querySelectorAll('input[name="stats-filter"]');
         radio.forEach((button)=>{
@@ -617,10 +622,6 @@ async function handleSearch(event) {
         });
     } catch (error) {
         console.error('Error fetching player stats:', error.message);
-        if (error.status === 404) {
-            result.insertAdjacentHTML('afterbegin', "<p class='gamemode-error'>The player was not found</p>");
-            return;
-        }
         result.innerHTML = `<p class='gamemode-error'>An error occurred while fetching stats. Please try again later.</p>`;
     }
 }
@@ -637,16 +638,16 @@ function insertStats(selectedValue, response, plrStats) {
     }
     switch(selectedValue){
         case 'overall':
-            plrStats.insertAdjacentHTML('beforeend', (0, _handlebars.createResultStats)(statsData));
+            plrStats.insertAdjacentHTML('beforeend', (0, _handlebarsJs.createResultStats)(statsData));
             break;
         case 'solo':
-            plrStats.insertAdjacentHTML('beforeend', (0, _handlebars.createResultStatsSolo)(statsData));
+            plrStats.insertAdjacentHTML('beforeend', (0, _handlebarsJs.createResultStatsSolo)(statsData));
             break;
         case 'duo':
-            plrStats.insertAdjacentHTML('beforeend', (0, _handlebars.createResultStatsDuo)(statsData));
+            plrStats.insertAdjacentHTML('beforeend', (0, _handlebarsJs.createResultStatsDuo)(statsData));
             break;
         case 'squad':
-            plrStats.insertAdjacentHTML('beforeend', (0, _handlebars.createResultStatsSquad)(statsData));
+            plrStats.insertAdjacentHTML('beforeend', (0, _handlebarsJs.createResultStatsSquad)(statsData));
             break;
         default:
             plrStats.insertAdjacentHTML('beforeend', "<p class='gamemode-error'>Invalid game mode selected</p>");
@@ -667,7 +668,7 @@ function createTime(response) {
 </ul>`;
 }
 
-},{"./handlebars":"dVonf"}],"dVonf":[function(require,module,exports,__globalThis) {
+},{"./handlebars.js":"dVonf"}],"dVonf":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "createResultStats", ()=>createResultStats);
