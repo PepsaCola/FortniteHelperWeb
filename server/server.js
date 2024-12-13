@@ -207,6 +207,27 @@ app.get('/api/get-map', async (req, res) => {
     }
 })
 
+app.get('/api/get-stats', async (req, res) => {
+    const BASE_URL = 'https://fortnite-api.com/v2/stats/br/v2';
+    const text = req.query.text;
+    const APIkey = 'c88484bd-0350-4ba1-ac69-87af7578c429';
+    try {
+        const response = await axios.get(`${BASE_URL}`, {
+            params: { name: text },
+            headers: {
+                Authorization: APIkey,
+            },
+        });
+        res.json(response.data);
+
+    } catch (error) {
+        console.log(error);
+        console.log(error.message);
+
+        res.send(error);
+    }
+})
+
 // Запуск сервера
 app.listen(PORT, () => {
     console.log(`Сервер запущено на http://localhost:${PORT}`);
