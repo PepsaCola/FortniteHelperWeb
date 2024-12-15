@@ -1,4 +1,4 @@
-import Handlebars  from 'handlebars'
+import Handlebars  from 'handlebars/dist/handlebars.js'
 
 export const createResultStats = Handlebars.compile(`
   <ul class='stats-list'>
