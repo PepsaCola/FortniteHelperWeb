@@ -649,7 +649,7 @@ async function fetchSearchResults() {
     const divResult = document.querySelector('.cosmetic-search-result-list');
     divResult.innerHTML = ''; // Очищуємо попередні результати
     try {
-        const response = await fetch(`http://localhost:3000/api/search-results?filter=${currentFilter}&text=${currentText}`, {});
+        const response = await fetch(`http://91.18.238.159:3000/api/search-results?filter=${currentFilter}&text=${currentText}`, {});
         const data = await response.json();
         for (const item of data)divResult.insertAdjacentHTML('beforeend', createSearchResult(item));
         // Перевіряємо, чи вже існує кнопка "Load more"
@@ -677,7 +677,7 @@ async function fetchLoadMore() {
     const btn = document.querySelector('.cosmetic-search-result-btn');
     try {
         // Передаємо поточний фільтр у запит
-        const response = await fetch(`http://localhost:3000/api/search-more?filter=${currentFilter}&text=${currentText}`);
+        const response = await fetch(`http://91.18.238.159:3000/api/search-more?filter=${currentFilter}&text=${currentText}`);
         const data = await response.json();
         for (const item of data)divResult.insertAdjacentHTML('beforeend', createSearchResult(item));
         if (data.length < 56) // Якщо більше немає даних, приховуємо кнопку

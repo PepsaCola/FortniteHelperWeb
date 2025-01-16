@@ -13,7 +13,9 @@ const config = {
 };
 
 // Дозволяємо CORS
-app.use(cors());
+app.use(cors(
+    {origin: '*'}
+));
 
 // Маршрут для отримання результатів пошуку
 app.get('/api/search-results', async (req, res) => {
@@ -229,6 +231,6 @@ app.get('/api/get-stats', async (req, res) => {
 })
 
 // Запуск сервера
-app.listen(PORT, () => {
+app.listen(PORT,'0.0.0.0', () => {
     console.log(`Сервер запущено на http://localhost:${PORT}`);
 });
