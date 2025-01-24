@@ -1,7 +1,5 @@
 import{createResultStats,createResultName,createResultStatsSolo,createResultStatsDuo,createResultStatsSquad}  from './handlebars.js';
 
-
-
 const stats = document.querySelector('.search-stats-form');
 stats.addEventListener('submit', event => handleSearch(event));
 const result = document.querySelector('.search-stats-result');
