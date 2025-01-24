@@ -1,5 +1,3 @@
-import Handlebars  from 'handlebars'
-
 export const createResultStats = (data) => {
     return `
     <ul class='stats-list'>
