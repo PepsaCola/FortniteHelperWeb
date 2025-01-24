@@ -23,6 +23,7 @@ async function handleSearch(event) {
     }
 
     result.insertAdjacentHTML('afterbegin', createResultName(response));
+    console.log(response);
     const selectedValue = document.querySelector(
         'input[name="stats-filter"]:checked'
     ).value;

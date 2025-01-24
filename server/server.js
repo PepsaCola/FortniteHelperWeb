@@ -14,7 +14,10 @@ const config = {
 
 // Дозволяємо CORS
 app.use(cors(
-    {origin: '*'}
+    {origin: '*',
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        preflightContinue: false,
+        optionsSuccessStatus: 204}
 ));
 
 // Маршрут для отримання результатів пошуку
@@ -234,3 +237,4 @@ app.get('/api/get-stats', async (req, res) => {
 app.listen(PORT,'0.0.0.0', () => {
     console.log(`Сервер запущено на http://localhost:${PORT}`);
 });
+console.log('connection started');
